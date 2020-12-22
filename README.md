@@ -1,6 +1,6 @@
 # KeyMirror
 
-keyMirror ruby is a simple ruby helper which returns hash with values equal to stringified keys.
+key_mirror ruby is a simple ruby helper which returns hash with values equal to stringified keys.
 This gem is inspired by [keyMirror JS](https://github.com/STRML/keyMirror).
 
 ## Installation

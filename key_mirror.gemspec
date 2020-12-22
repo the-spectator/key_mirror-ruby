@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["mailakshayb1@gmail.com"]
 
   spec.summary       = %q{Ruby implementation for JS keyMirror library}
-  spec.description   = %q{Ruby implementation for JS keyMirror library}
+  spec.description   = %q{key_mirror ruby is a simple ruby helper which returns hash with values equal to stringified keys.}
   spec.homepage      = "https://github.com/the-spectator/keymirror-ruby"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
