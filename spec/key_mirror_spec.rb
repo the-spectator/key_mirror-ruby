@@ -13,7 +13,7 @@ RSpec.describe KeyMirror do
     end
 
     it "overrides the value with stringified key" do
-      KeyMirror.({ key: 'value', g: 'new_value', HELLO: 'hello'}).each do |key, val|
+      KeyMirror.({ key: 'value', g: 'new_value', 'HELLO' => 'hello'}).each do |key, val|
         expect(val).to eq(key.to_s)
       end
     end
