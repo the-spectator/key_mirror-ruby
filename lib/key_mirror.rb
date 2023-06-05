@@ -5,7 +5,7 @@ require "key_mirror/version"
 module KeyMirror
   class ArgumentError < StandardError
     def initialize
-      super("argument must be a Hash")
+      super("argument must be a Hash or Array")
     end
   end
 
@@ -15,10 +15,11 @@ module KeyMirror
     end
   end
 
-  def self.call(hash)
-    raise KeyMirror::ArgumentError.new unless hash.is_a?(Hash)
+  def self.call(obj)
+    hash = {}
+    raise KeyMirror::ArgumentError.new unless obj.is_a?(Hash) || obj.is_a?(Array)
 
-    hash.each do |key, _|
+    obj.each do |key, _|
       raise KeyMirror::KeyError unless key.is_a?(String) || key.is_a?(Symbol)
 
       hash[key] = key.to_s

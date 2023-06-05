@@ -18,6 +18,18 @@ RSpec.describe KeyMirror do
       end
     end
 
+    it "handles array of symbol" do
+      KeyMirror.(%i[a b c]).each do |key, val|
+        expect(val).to eq(key.to_s)
+      end
+    end
+
+    it "handles array of string" do
+      KeyMirror.(%w[a b c]).each do |key, val|
+        expect(val).to eq(key.to_s)
+      end
+    end
+
     it "works for empty hash" do
       empty_hash = {}
       expect(KeyMirror.(empty_hash)).to eq(empty_hash)
